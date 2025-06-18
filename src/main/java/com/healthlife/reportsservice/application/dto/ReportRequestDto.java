@@ -7,6 +7,8 @@ public class ReportRequestDto {
     private String reportType;
     private LocalDate requestDate;
     private String status;
+    private String url;
+    private String resumenJson;
 
     public ReportRequestDto() {
     }
@@ -41,5 +43,21 @@ public class ReportRequestDto {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public String getResumenJson() {
+        return resumenJson;
+    }
+
+    public void setResumenJson(String resumenJson) {
+        this.resumenJson = resumenJson;
     }
 }

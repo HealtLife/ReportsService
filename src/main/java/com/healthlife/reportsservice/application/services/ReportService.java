@@ -27,7 +27,7 @@ public class ReportService {
     @Transactional
     public Map<String, Object> generateReport(String dni) {
         // Save report request
-        ReportRequest reportRequest = new ReportRequest(dni, "GENERAL", LocalDate.now(), "COMPLETED");
+        ReportRequest reportRequest = new ReportRequest(dni, "GENERAL", LocalDate.now(), "COMPLETED","url","resumen");
         repository.save(reportRequest);
 
         // Get all medical data from NutritionService

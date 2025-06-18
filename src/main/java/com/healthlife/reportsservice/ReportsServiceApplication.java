@@ -9,7 +9,7 @@ import java.sql.*;
 public class ReportsServiceApplication {
 
     public static void main(String[] args) {
-        createDatabaseIfNotExists("jdbc:postgresql://localhost:5432/", "postgres", "postgres", "nutrimove_reports");
+        createDatabaseIfNotExists("jdbc:postgresql://localhost:5432/", "postgres", "renato", "nutrimove_reports");
         SpringApplication.run(ReportsServiceApplication.class, args);
     }
 

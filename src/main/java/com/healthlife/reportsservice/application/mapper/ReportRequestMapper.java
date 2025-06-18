@@ -7,11 +7,13 @@ import org.springframework.stereotype.Component;
 @Component
 public class ReportRequestMapper {
     public ReportRequest toEntity(ReportRequestDto dto) {
-        return new ReportRequest(
+        return  new ReportRequest(
                 dto.getDni(),
                 dto.getReportType(),
                 dto.getRequestDate(),
-                dto.getStatus()
+                dto.getStatus(),
+                dto.getUrl(),
+                dto.getResumenJson()
         );
     }
 

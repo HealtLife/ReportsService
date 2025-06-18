@@ -21,13 +21,20 @@ public class ReportRequest {
 
     private String status;
 
-    public ReportRequest() {}
+    private String url;
 
-    public ReportRequest(String dni, String reportType, LocalDate requestDate, String status) {
+    private String resumenJson;
+
+    public ReportRequest(String dni, String reportType, LocalDate requestDate, String status, String url, String resumenJson) {}
+
+    public ReportRequest(Long id, String dni, String reportType, LocalDate requestDate, String status, String url, String resumenJson) {
+        this.id = id;
         this.dni = dni;
         this.reportType = reportType;
         this.requestDate = requestDate;
         this.status = status;
+        this.url = url;
+        this.resumenJson = resumenJson;
     }
 
     public Long getId() {
@@ -68,5 +75,21 @@ public class ReportRequest {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public String getResumenJson() {
+        return resumenJson;
+    }
+
+    public void setResumenJson(String resumenJson) {
+        this.resumenJson = resumenJson;
     }
 }
